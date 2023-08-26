@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: antiquewhite; */
+    overflow-x: hidden;
+    background: linear-gradient(-45deg, rgb(31, 31, 31),rgb(0, 0, 0));
+}
+
+nav {
+    font-family: 'Mukta', sans-serif;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 69px;
+    background-color: black;
+    color: white;
+}
+nav ul li{
+    padding: 0 12px;
+    transition: 0.5s;
+}
+.navBar:hover{
+    color: rgb(169, 168, 255);
+    cursor: pointer;
+    scale: 1.1;
+    font-weight: 900;
+}
+
+.brand img{
+    width: 56px;
+    padding: 0 8px;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+
+
+
+.container{
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    font-family: 'Mukta', sans-serif;
+    display: flex;
+    margin: 23px auto; 
+    /* center */
+    width: 70%;
+    border-radius: 12px;
+    padding: 30px;
+    background-image: url("./fade.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.container h1{
+    text-align: center;
+}
+.songList{
+    width: 40%;
+}
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    /* width: 100%; */
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+    position: relative;
+    transition: 0.3s;
+}
+.songItem:hover{
+    scale: 1.05;
+}
+.songItem img{
+    width: 43px;
+    margin: 0 5px;
+    margin-right: 15px;
+    border-radius: 34px;
+    transition: 0.5s;
+}
+.songItem img:hover{
+    scale: 1.1;
+}
+.timeStamp{
+    margin: 0 23px;
+}
+.timeStamp i{
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.timeStamp i:hover{
+    scale: 1.2;
+}
+.songItemContainer{
+    margin-top: 74px;
+}
+
+
+
+
+
+
+.bottom{
+    bottom: 0;
+    position: sticky;
+    height: 120px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.icons{
+    margin: 14px;
+}
+.icons i{
+    cursor: pointer;
+    margin: 0px 10px;
+    transition: 0.5s;
+}
+
+.icons i:hover{
+    scale: 1.1;
+    color: rgb(191, 164, 218);
+}
+
+#myProgressBar{
+    width: 80vw;
+    text-align: center;
+    cursor: pointer;
+}
+.songInfo{
+    position: absolute;
+    left: 149px;
+    font-family: 'Mukta', sans-serif;
+}
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+    margin-right: 10px;
+}
+.playingSong{
+    scale: 1.1;
+    /* background-color: rgb(180, 213, 221); */
+    font-weight: bold;
+    background: linear-gradient(to right,rgb(216, 236, 241),rgb(106, 158, 170));
+    box-shadow: rgba(138, 138, 138, 0.25) 0px 6px 12px -2px, rgba(217, 217, 217, 0.3) 0px 3px 7px -3px;
+}
+
+.rotate {
+    animation: rotation 15s infinite linear;
+  }
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+#masterSongName{
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.rotateLogo {
+    animation: rotationLogo 25s infinite linear;
+  }
+@keyframes rotationLogo {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  @media screen and (max-width: 450px){
+    .container{
+        padding: 0 auto;
+        margin: 0 auto;
+        width: 100%;
+        background: linear-gradient(to right,rgb(7, 7, 7),rgb(64, 64, 64));
+    }
+    .songList{
+        padding: 0;
+    }
+    .songList h1{
+        display: none;
+    }
+    .songItemContainer{
+        margin: 0 0;
+        width: 100%;
+    }
+    .songItem{
+        width: 300px;
+    }
+    .bottom{
+        margin-top: 50px;
+    }
+    .icons i{
+        width: 40px;
+    }
+    .songInfo{
+        display: none;
+    }
+  }
